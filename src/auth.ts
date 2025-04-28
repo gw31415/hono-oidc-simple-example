@@ -31,6 +31,7 @@ const oidc = OIDC((c) => {
         clientSecret: envs.OIDC_GOOGLE_SECRET,
         useLocalJwt: false,
 
+        // Create the Claims from the ID Token. You can create CustomClaims refer to your database.
         // NOTE: The type of the Claims is automatically set same as this function's result type.
         createClaims: async (c, tokens) => {
           const idToken: string | undefined = await tokens.getIDToken(c);
@@ -55,7 +56,13 @@ const oidc = OIDC((c) => {
         scopes: ["openid"],
       },
     ],
-    getIssUrl: () => "https://accounts.google.com",
+    // How to switch the Issuer refer to the context.
+    getIssUrl: (_context) => "https://accounts.google.com",
+
+
+    //////////////////////////////////////////////
+    // Save the tokens in the client-side cookie
+    //////////////////////////////////////////////
     clientSideTokenStore: {
       getRefreshToken: () => getCookie(c, "refresh_token"),
       setRefreshToken: (c, token) => {
