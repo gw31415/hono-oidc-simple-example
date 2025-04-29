@@ -9,7 +9,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@gw31415/hono-oidc-simple": "^0.7.0",
+    "@gw31415/hono-oidc-simple": "^0.7.3",
     "@hono/node-server": "^1.14.1",
     "hono": "^4.7.7",
     "jose": "^6.0.10"

@@ -4,7 +4,7 @@
     "": {
       "name": "hono-oidc-simple-example",
       "dependencies": {
-        "@gw31415/hono-oidc-simple": "^0.7.0",
+        "@gw31415/hono-oidc-simple": "^0.7.3",
         "@hono/node-server": "^1.14.1",
         "hono": "^4.7.7",
         "jose": "^6.0.10",
@@ -18,7 +18,7 @@
     },
   },
   "packages": {
-    "@gw31415/hono-oidc-simple": ["@gw31415/hono-oidc-simple@0.7.0", "", { "peerDependencies": { "hono": "^4.6.13" } }, "sha512-7qLEpnskcWT4fUNIrReJhhiSfah3X2XiQzvXaZGno7VUp3LXHCVUWDRmM0rNDCQKGI7aUZ1TUrCp8Tetb1kDOg=="],
+    "@gw31415/hono-oidc-simple": ["@gw31415/hono-oidc-simple@0.7.3", "", { "peerDependencies": { "hono": "^4.6.13" } }, "sha512-kBjlvM/r7XL36ApgbKU0Js59Le2/NILx9p+kE6pTuXEnPpYFTQ/a7shaZw0cweC6RpvK2782cRV1k4OCM4vnsQ=="],
 
     "@hono/node-server": ["@hono/node-server@1.14.1", "", { "peerDependencies": { "hono": "^4" } }, "sha512-vmbuM+HPinjWzPe7FFPWMMQMsbKE9gDPhaH0FFdqbGpkT5lp++tcWDTxwBl5EgS5y6JVgIaCdjeHRfQ4XRBRjQ=="],
 
