@@ -18,7 +18,11 @@ const oidc = OIDC((c) => {
   const envs = env<{
     OIDC_GOOGLE_CLIENT: string;
     OIDC_GOOGLE_SECRET: string;
+    OIDC_GOOGLE_SCOPES?: string;
   }>(c);
+  const scopes = (envs.OIDC_GOOGLE_SCOPES ?? "openid profile email").trim().split(
+    /\s+/
+  );
   return {
     issuers: [
       {
@@ -53,7 +57,7 @@ const oidc = OIDC((c) => {
           }
           return undefined;
         },
-        scopes: ["openid"],
+        scopes,
       },
     ],
     // How to switch the Issuer refer to the context.
